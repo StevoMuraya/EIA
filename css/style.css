@@ -172,6 +172,10 @@
   font-size: 13px;
 }
 
+.btn.login {
+  padding: 0.5rem 2rem;
+}
+
 .btn.search {
   height: 2.5rem;
 }
@@ -572,11 +576,12 @@
   background-color: var(--main-accent-color);
   color: #fff;
   cursor: pointer;
-  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, background-color 400ms;
 }
 
 .btn-holder .create-btn:hover {
   transform: scale(1.05);
+  background-color: #cc1313;
 }
 
 .btn-holder:hover::before {
