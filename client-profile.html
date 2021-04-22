@@ -16,6 +16,18 @@
   </head>
   <body>
     <div class="dash-container">
+      <div class="pop-up-back" id="popup_background"></div>
+      <div class="pop-box" id="popup_panel">
+        <div class="pop-box-panel">
+          <h2>Select Policy Type</h2>
+          <div class="policy-otions">
+            <a href="motor-details.html" class="policy-type-select">Motor</a>
+            <a href="non-motor-details.html" class="policy-type-select"
+              >Non-Motor</a
+            >
+          </div>
+        </div>
+      </div>
       <div class="dash-top">
         <div class="dash-top-right">
           <img src="./images/avatar.jpg" alt="Profile Image" />
@@ -24,7 +36,7 @@
       </div>
 
       <div class="dash-main">
-        <div class="dash-main-top">
+        <!-- <div class="dash-main-top">
           <div class="form-action-flexed">
             <input
               type="text"
@@ -34,13 +46,26 @@
             <button class="btn search">SEARCH</button>
             <a href="new-client.html" class="btn other search">ADD NEW</a>
           </div>
-        </div>
+        </div> -->
 
         <div class="dash-main-body">
           <div class="client-profile-page">
             <div class="client-details">
               <div class="client-image">
                 <img src="./images/avatar.jpg" alt="" />
+                <div class="policy-otion-actions">
+                  <a
+                    class="btn other search"
+                    style="
+                      width: 150px;
+                      display: flex;
+                      justify-content: center;
+                      background-color: #b61f1f;
+                    "
+                    id="new_policy"
+                    >Add New Policy</a
+                  >
+                </div>
               </div>
               <h2>Client Details</h2>
               <div class="client-details-row">
@@ -83,19 +108,66 @@
                     <h3>KRA Pin:</h3>
                     <h4>A01948920V</h4>
                   </div>
-                  <div class="client-prof-info">
-                    <h3>Registration Number:</h3>
-                    <h4>KSJLSKSI-098J</h4>
-                  </div>
                 </div>
               </div>
             </div>
-            <div class="client-documents">
-              <h2>Client Scanned Documents</h2>
+            <div
+              class="client-documents"
+              style="
+                display: flex;
+                flex-direction: initial;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid #0000003b;
+              "
+            >
+              <h2 style="width: 100%">Client Scanned Documents</h2>
               <a href="" class="document">KRA Certificate</a>
-              <a href="" class="document">ID/Passport/DL Copy</a>
-              <a href="" class="document">Cert of Incorporation</a>
+              <a href="" class="document">ID | Cert of Incorporation</a>
             </div>
+
+            <table class="info-list-table" style="margin-bottom: 3rem">
+              <thead>
+                <tr>
+                  <th>Reg No.</th>
+                  <th>Client Name</th>
+                  <th>Sum Insured</th>
+                  <th>Type of Cover</th>
+                  <th>From</th>
+                  <th>To</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr onclick="document.location='mv-details.html'">
+                  <td>KBL 084R</td>
+                  <td>Stephen Muraya</td>
+                  <td>Kshs 700000</td>
+                  <td>Comprehensive</td>
+                  <td>8-Mar-2021</td>
+                  <td>7-Mar-2022</td>
+                </tr>
+
+                <tr onclick="document.location='mv-details.html'">
+                  <td>KBL 084R</td>
+                  <td>Stephen Muraya</td>
+                  <td>Kshs 700000</td>
+                  <td>Comprehensive</td>
+                  <td>8-Mar-2021</td>
+                  <td>7-Mar-2022</td>
+                </tr>
+
+                <tr onclick="document.location='mv-details.html'">
+                  <td>KBL 084R</td>
+                  <td>Stephen Muraya</td>
+                  <td>Kshs 700000</td>
+                  <td>Comprehensive</td>
+                  <td>8-Mar-2021</td>
+                  <td>7-Mar-2022</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -120,5 +192,19 @@
         </ul>
       </div>
     </div>
+    <script>
+      var policy = document.getElementById("new_policy");
+      var pop_up_back = document.getElementById("popup_background");
+      var pop_up_panel = document.getElementById("popup_panel");
+      policy.addEventListener("click", () => {
+        pop_up_back.classList.toggle("show");
+        pop_up_panel.classList.toggle("show");
+      });
+
+      pop_up_panel.addEventListener("click", () => {
+        pop_up_back.classList.remove("show");
+        pop_up_panel.classList.remove("show");
+      });
+    </script>
   </body>
 </html>

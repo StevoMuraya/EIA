@@ -24,7 +24,7 @@
       </div>
 
       <div class="dash-main">
-        <div class="dash-main-top">
+        <!-- <div class="dash-main-top">
           <div class="form-action-flexed">
             <input
               type="text"
@@ -33,7 +33,7 @@
             />
             <button class="btn search">SEARCH</button>
           </div>
-        </div>
+        </div> -->
 
         <div class="dash-main-body">
           <div class="client-profile-page">
@@ -67,7 +67,16 @@
                       <input
                         type="text"
                         class="user-reg-input"
-                        placeholder="Physical Address"
+                        placeholder="Street, City"
+                      />
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="text"
+                        class="user-reg-input"
+                        placeholder="Country"
                       />
                     </div>
                   </div>
@@ -92,6 +101,33 @@
                   <div class="client-prof-info">
                     <div class="user-input-group">
                       <input
+                        type="text"
+                        class="user-reg-input"
+                        placeholder="Client Occupation"
+                      />
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <select
+                        name=""
+                        id=""
+                        class="user-reg-input"
+                        style="padding: 0 0 0 1rem"
+                      >
+                        <option value="" selected>Select Client Level</option>
+                        <option value="">Level A</option>
+                        <option value="">Level B</option>
+                        <option value="">Level C</option>
+                        <option value="">Level D</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="details-col">
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
                         type="email"
                         class="user-reg-input"
                         placeholder="Email"
@@ -103,12 +139,10 @@
                       <input
                         type="number"
                         class="user-reg-input"
-                        placeholder="ID| Passport| DL Number"
+                        placeholder="ID Number| Business Number"
                       />
                     </div>
                   </div>
-                </div>
-                <div class="details-col">
                   <div class="client-prof-info">
                     <div class="user-input-group">
                       <select
@@ -136,7 +170,7 @@
                         </option>
                         <option value="">Manufacturing</option>
                         <option value="">Processing</option>
-                        <option value="">Contruction</option>
+                        <option value="">Construction</option>
                       </select>
                     </div>
                   </div>
@@ -154,9 +188,56 @@
                       <input
                         type="text"
                         class="user-reg-input"
-                        placeholder="Registration Number"
+                        placeholder="Contact Person Name"
                       />
                     </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="tel"
+                        class="user-reg-input"
+                        placeholder="Contact Person Phone"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  background-color: rgba(128, 128, 128, 0.473);
+                  width: 100%;
+                  height: 1px;
+                  margin: 1rem;
+                "
+              ></div>
+              <div class="client-upload-docs">
+                <h1>Upload Documents</h1>
+                <h5 style="font-weight: 300">
+                  Click the Buttons to select the files
+                </h5>
+                <div class="upload-docs-content">
+                  <div class="upload-holder">
+                    <label class="id_upload" for="id_copy">
+                      ID Copy | Cert of Incorporation
+                    </label>
+                    <input
+                      id="id_copy"
+                      type="file"
+                      class="input-upload-documents"
+                    />
+                    <p class="upload-file-info-id"></p>
+                  </div>
+                  <div class="upload-holder">
+                    <label class="kra_label" for="kra_upload">
+                      KRA Pin Certificate
+                    </label>
+                    <input
+                      type="file"
+                      id="kra_upload"
+                      class="input-upload-documents"
+                    />
+                    <p class="upload-file-info-kra"></p>
                   </div>
                 </div>
               </div>
@@ -188,5 +269,6 @@
         </ul>
       </div>
     </div>
+    <script type="text/javascript" src="upload-files.js"></script>
   </body>
 </html>
