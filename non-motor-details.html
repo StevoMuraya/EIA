@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>EIA Management System</title>
+  </head>
+  <body>
+    <div class="dash-container">
+      <div class="dash-top">
+        <div class="dash-top-right">
+          <img src="./images/avatar.jpg" alt="Profile Image" />
+          <h3>Enzo Wo</h3>
+        </div>
+      </div>
+
+      <div class="dash-main">
+        <!-- <div class="dash-main-top">
+          <div class="form-action-flexed">
+            <input
+              type="text"
+              class="input-space-search"
+              placeholder="Enter detail to search"
+            />
+            <button class="btn search">SEARCH</button>
+            <a href="new-client.html" class="btn other search">ADD NEW</a>
+          </div>
+        </div> -->
+
+        <div class="dash-main-body">
+          <div class="client-profile-page">
+            <div class="client-details">
+              <h2>Non-Motor Policy Details</h2>
+              <div class="client-details-row">
+                <div class="details-col">
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="text"
+                        class="user-reg-input"
+                        placeholder="Policy Name/ Project Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="text"
+                        class="user-reg-input"
+                        placeholder="Branch"
+                      />
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <select
+                        name=""
+                        id=""
+                        class="user-reg-input"
+                        style="padding: 0 0 0 1rem"
+                      >
+                        <option value="" selected>Select Cover Type</option>
+                        <option value="">--INDIVIDUAL--</option>
+                        <option value="">Personal Accident</option>
+                        <option value="">Professional Indemnity</option>
+                        <option value="">Others</option>
+                        <option value="">--CORPORATE--</option>
+                        <option value="">Contrators all risk</option>
+                        <option value="">Marine Cargo</option>
+                        <option value="">Fidelity Guarantee</option>
+                        <option value="">Work injury benefit</option>
+                        <option value="">Public Liability</option>
+                        <option value="">Fire and Perils</option>
+                        <option value="">Bulglary</option>
+                        <option value="">
+                          Contactor's Plant and Machinery
+                        </option>
+                        <option value="">Goods in transit</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="text"
+                        class="user-reg-input"
+                        placeholder="Business/ Project Number"
+                      />
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <select
+                        name=""
+                        id=""
+                        class="user-reg-input"
+                        style="padding: 0 0 0 1rem"
+                      >
+                        <option value="" selected>Select Insurer</option>
+                        <option value="">Sanlum</option>
+                        <option value="">Jubilee</option>
+                        <option value="">AAR</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="number"
+                        class="user-reg-input"
+                        placeholder="No. of employees"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="details-col">
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="text"
+                        class="user-reg-input"
+                        placeholder="Policy Number"
+                      />
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <p
+                      style="
+                        width: 100%;
+                        padding-left: 1rem;
+                        text-align: center;
+                      "
+                    >
+                      Policy Period
+                    </p>
+                    <div class="user-split-row">
+                      <div class="user-input-group">
+                        <input
+                          type="text"
+                          class="user-reg-input"
+                          placeholder="From"
+                          onblur="(this.type='text')"
+                          onfocus="(this. type='date')"
+                        />
+                      </div>
+                      <div class="user-input-group">
+                        <input
+                          type="text"
+                          class="user-reg-input"
+                          placeholder="To"
+                          onblur="(this.type='text')"
+                          onfocus="(this. type='date')"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="number"
+                        class="user-reg-input"
+                        placeholder="Sum Insured"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="client-documents">
+              <h2>Scan Documents</h2>
+              <div
+                class="upload-holder"
+                style="
+                  width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <label class="kra_label" for="kra_upload">
+                  Certificate of Incorporation
+                </label>
+                <input
+                  type="file"
+                  id="kra_upload"
+                  class="input-upload-documents"
+                />
+                <p class="upload-file-info-kra"></p>
+              </div>
+            </div>
+            <div class="btn-holder" style="margin: 0 0 2rem 0">
+              <button class="create-btn">Create Policy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="date-time">
+          <h4>10:00 am 30th April 2021</h4>
+        </div>
+      </div>
+      <div class="dash-side-pane">
+        <div class="dash-side-pane-img">
+          <img src="./images/eia_logo.png" alt="EIA Image" />
+        </div>
+        <ul class="links">
+          <li><a href="home.html" class="link active">HOME</a></li>
+          <li><a href="dashboard.html" class="link">CLIENTS</a></li>
+          <li><a href="underwriting.html" class="link">UNDERWRITING</a></li>
+          <li><a href="claims.html" class="link">CLAIMS</a></li>
+          <li><a href="" class="link">CREDIT</a></li>
+          <li><a href="" class="link">REPORTS</a></li>
+        </ul>
+        <ul class="links bottom">
+          <li><a href="" class="link">LOGOUT</a></li>
+          <li><a href="admin.html" class="link">ADMIN</a></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="upload-files.js"></script>
+    <script>
+      var policy = document.getElementById("new_policy");
+      var pop_up_back = document.getElementById("popup_background");
+      var pop_up_panel = document.getElementById("popup_panel");
+      policy.addEventListener("click", () => {
+        pop_up_back.classList.toggle("show");
+        pop_up_panel.classList.toggle("show");
+      });
+
+      pop_up_panel.addEventListener("click", () => {
+        pop_up_back.classList.remove("show");
+        pop_up_panel.classList.remove("show");
+      });
+    </script>
+  </body>
+</html>

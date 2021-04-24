@@ -68,11 +68,16 @@
                         class="user-reg-input"
                         style="padding: 0 0 0 1rem"
                       >
-                        <option value="" selected>Select Cover Type</option>
-                        <option value="">C.A.R</option>
-                        <option value="">C.A.R</option>
-                        <option value="">C.A.R</option>
-                        <option value="">C.A.R</option>
+                        <option value="" selected>Select MV Class</option>
+                        <option value="">--PRIVATE--</option>
+                        <option value="">Private Motor Vehicle</option>
+                        <option value="">Private Motor Cycle</option>
+                        <option value="">--COMMERCIAL--</option>
+                        <option value="">General Cartage</option>
+                        <option value="">Special Vehicles</option>
+                        <option value="">Institution Vehicles</option>
+                        <option value="">Public Service Vehicles</option>
+                        <option value="">CHauffer Drive</option>
                       </select>
                     </div>
                   </div>
@@ -100,8 +105,32 @@
                       </select>
                     </div>
                   </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="text"
+                        class="user-reg-input"
+                        placeholder="Engine Number"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <div class="details-col">
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <select
+                        name=""
+                        id=""
+                        class="user-reg-input"
+                        style="padding: 0 0 0 1rem"
+                      >
+                        <option value="" selected>Select Cover Type</option>
+                        <option value="">Comprehensive</option>
+                        <option value="">Third Party</option>
+                        <option value="">Third Party Fire &amp; Theft</option>
+                      </select>
+                    </div>
+                  </div>
                   <div class="client-prof-info">
                     <div class="user-input-group">
                       <input
@@ -179,8 +208,8 @@
                 style="
                   width: 100%;
                   display: flex;
-                  flex-direction: initial;
-                  justify-content: center;
+                  flex-direction: column;
+                  align-items: center;
                 "
               >
                 <label class="kra_label" for="kra_upload"> Logbook </label>
@@ -191,6 +220,9 @@
                 />
                 <p class="upload-file-info-kra"></p>
               </div>
+            </div>
+            <div class="btn-holder" style="margin: 0 0 2rem 0">
+              <button class="create-btn">Create Policy</button>
             </div>
           </div>
         </div>
@@ -204,6 +236,7 @@
           <img src="./images/eia_logo.png" alt="EIA Image" />
         </div>
         <ul class="links">
+          <li><a href="home.html" class="link">HOME</a></li>
           <li><a href="dashboard.html" class="link active">CLIENTS</a></li>
           <li><a href="underwriting.html" class="link">UNDERWRITING</a></li>
           <li><a href="claims.html" class="link">CLAIMS</a></li>
@@ -216,6 +249,7 @@
         </ul>
       </div>
     </div>
+    <script type="text/javascript" src="upload-files.js"></script>
     <script>
       var policy = document.getElementById("new_policy");
       var pop_up_back = document.getElementById("popup_background");
@@ -230,6 +264,5 @@
         pop_up_panel.classList.remove("show");
       });
     </script>
-    <script type="text/javascript" src="upload-files.js"></script>
   </body>
 </html>
