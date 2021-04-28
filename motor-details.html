@@ -64,21 +64,130 @@
                     <div class="user-input-group">
                       <select
                         name=""
-                        id=""
+                        id="class_selection"
                         class="user-reg-input"
                         style="padding: 0 0 0 1rem"
                       >
                         <option value="" selected>Select MV Class</option>
                         <option value="">--PRIVATE--</option>
-                        <option value="">Private Motor Vehicle</option>
-                        <option value="">Private Motor Cycle</option>
+                        <option value="Private Motor Vehicle">
+                          Private Motor Vehicle
+                        </option>
+                        <option value="Private Motor Cycle">
+                          Private Motor Cycle
+                        </option>
                         <option value="">--COMMERCIAL--</option>
-                        <option value="">General Cartage</option>
-                        <option value="">Special Vehicles</option>
-                        <option value="">Institution Vehicles</option>
-                        <option value="">Public Service Vehicles</option>
-                        <option value="">CHauffer Drive</option>
+                        <option value="General Cartage">General Cartage</option>
+                        <option value="Special Vehicles">
+                          Special Vehicles
+                        </option>
+                        <option value="Institution Vehicles">
+                          Institution Vehicles
+                        </option>
+                        <option value="Public Service Vehicles">
+                          Public Service Vehicles
+                        </option>
+                        <option value="Chauffer Drive">Chauffer Drive</option>
                       </select>
+                    </div>
+                  </div>
+                  <div class="benefits-list" id="benefits_list">
+                    <div class="benefits-content">
+                      <div class="check-box-holder">
+                        <div class="check-box">
+                          <input
+                            type="checkbox"
+                            name=""
+                            id="excess_protector"
+                          />
+                          <label for="excess_protector">Excess Protector</label>
+                        </div>
+                        <div class="check-box-input">
+                          <div class="client-prof-info">
+                            <div class="user-input-group">
+                              <input
+                                type="text"
+                                id="excess_basic_premium"
+                                class="user-reg-input"
+                                disabled
+                                placeholder="Basic Premium"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="check-box-holder">
+                        <div class="check-box">
+                          <input
+                            type="checkbox"
+                            name=""
+                            id="political_and_terror"
+                          />
+                          <label for="political_and_terror"
+                            >Political Violence &amp; Terrorism</label
+                          >
+                        </div>
+                        <div class="check-box-input">
+                          <div class="client-prof-info">
+                            <div class="user-input-group">
+                              <input
+                                type="text"
+                                disabled
+                                id="political_violence_basic_premium"
+                                class="user-reg-input"
+                                placeholder="Basic Premium"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="check-box-holder">
+                        <div class="check-box">
+                          <input
+                            type="checkbox"
+                            name=""
+                            id="personal_accident"
+                          />
+                          <label for="personal_accident"
+                            >Personal Accident</label
+                          >
+                        </div>
+                        <div class="check-box-input">
+                          <div class="client-prof-info">
+                            <div class="user-input-group">
+                              <input
+                                type="text"
+                                class="user-reg-input"
+                                disabled
+                                id="personal_accident_basic_premium"
+                                placeholder="Basic Premium"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="check-box-holder">
+                        <div class="check-box">
+                          <input type="checkbox" name="" id="other_benefit" />
+                          <label for="other_benefit">Other</label>
+                        </div>
+                        <div class="check-box-input">
+                          <div class="client-prof-info">
+                            <div class="user-input-group">
+                              <input
+                                type="text"
+                                disabled
+                                id="other_basic_premium"
+                                class="user-reg-input"
+                                placeholder="Basic Premium"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="client-prof-info">
@@ -251,17 +360,69 @@
     </div>
     <script type="text/javascript" src="upload-files.js"></script>
     <script>
-      var policy = document.getElementById("new_policy");
-      var pop_up_back = document.getElementById("popup_background");
-      var pop_up_panel = document.getElementById("popup_panel");
-      policy.addEventListener("click", () => {
-        pop_up_back.classList.toggle("show");
-        pop_up_panel.classList.toggle("show");
+      var classs = document.getElementById("class_selection");
+      var selected = classs.options[classs.selectedIndex].value;
+
+      var benefits_list = document.getElementById("benefits_list");
+
+      var other_benefit = document.getElementById("other_benefit");
+      var other_basic_premium = document.getElementById("other_basic_premium");
+      var personal_accident = document.getElementById("personal_accident");
+      var personal_accident_basic_premium = document.getElementById(
+        "personal_accident_basic_premium"
+      );
+      var excess_protector = document.getElementById("excess_protector");
+      var excess_basic_premium = document.getElementById(
+        "excess_basic_premium"
+      );
+      var political_violence_basic_premium = document.getElementById(
+        "political_violence_basic_premium"
+      );
+      var political_and_terror = document.getElementById(
+        "political_and_terror"
+      );
+
+      class_selection.addEventListener("change", function () {
+        if (classs.options[classs.selectedIndex].value == "") {
+          benefits_list.style.height = "0";
+          benefits_list.style.opacity = "0";
+        } else {
+          benefits_list.style.height = "auto";
+          benefits_list.style.opacity = "1";
+          benefits_list.style.pointerEvents = "all";
+        }
       });
 
-      pop_up_panel.addEventListener("click", () => {
-        pop_up_back.classList.remove("show");
-        pop_up_panel.classList.remove("show");
+      excess_protector.addEventListener("change", function () {
+        if (excess_protector.checked) {
+          excess_basic_premium.disabled = false;
+        } else {
+          excess_basic_premium.disabled = true;
+        }
+      });
+
+      political_and_terror.addEventListener("change", function () {
+        if (political_and_terror.checked) {
+          political_violence_basic_premium.disabled = false;
+        } else {
+          political_violence_basic_premium.disabled = true;
+        }
+      });
+
+      personal_accident.addEventListener("change", function () {
+        if (personal_accident.checked) {
+          personal_accident_basic_premium.disabled = false;
+        } else {
+          personal_accident_basic_premium.disabled = true;
+        }
+      });
+
+      other_benefit.addEventListener("change", function () {
+        if (other_benefit.checked) {
+          other_basic_premium.disabled = false;
+        } else {
+          other_basic_premium.disabled = true;
+        }
       });
     </script>
   </body>
