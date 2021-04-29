@@ -170,21 +170,24 @@
                       </div>
 
                       <div class="check-box-holder">
-                        <div class="check-box">
-                          <input type="checkbox" name="" id="other_benefit" />
-                          <label for="other_benefit">Other</label>
+                        <div class="check-box-input">
+                          <div class="user-input-group" style="padding: 0">
+                            <input
+                              type="text"
+                              class="user-reg-input"
+                              id="other_benefits_non"
+                              placeholder="Other Benefit"
+                            />
+                          </div>
                         </div>
                         <div class="check-box-input">
-                          <div class="client-prof-info">
-                            <div class="user-input-group">
-                              <input
-                                type="text"
-                                disabled
-                                id="other_basic_premium"
-                                class="user-reg-input"
-                                placeholder="Basic Premium"
-                              />
-                            </div>
+                          <div class="user-input-group">
+                            <input
+                              type="number"
+                              class="user-reg-input"
+                              id="other_benefits_basic_premium"
+                              placeholder="Basic Premium"
+                            />
                           </div>
                         </div>
                       </div>
@@ -365,8 +368,6 @@
 
       var benefits_list = document.getElementById("benefits_list");
 
-      var other_benefit = document.getElementById("other_benefit");
-      var other_basic_premium = document.getElementById("other_basic_premium");
       var personal_accident = document.getElementById("personal_accident");
       var personal_accident_basic_premium = document.getElementById(
         "personal_accident_basic_premium"
@@ -382,7 +383,7 @@
         "political_and_terror"
       );
 
-      class_selection.addEventListener("change", function () {
+      classs.addEventListener("change", function () {
         if (classs.options[classs.selectedIndex].value == "") {
           benefits_list.style.height = "0";
           benefits_list.style.opacity = "0";
@@ -414,14 +415,6 @@
           personal_accident_basic_premium.disabled = false;
         } else {
           personal_accident_basic_premium.disabled = true;
-        }
-      });
-
-      other_benefit.addEventListener("change", function () {
-        if (other_benefit.checked) {
-          other_basic_premium.disabled = false;
-        } else {
-          other_basic_premium.disabled = true;
         }
       });
     </script>
