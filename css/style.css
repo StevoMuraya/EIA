@@ -1279,3 +1279,7 @@ td.users {
 .check-box-input {
   flex: 1;
 }
+.disabled-input {
+  background-color: rgb(209, 209, 209);
+  color: hsl(0, 0%, 0%);
+}

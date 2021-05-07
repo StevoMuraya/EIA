@@ -38,7 +38,7 @@
 
         <div class="dash-main-body">
           <div class="client-profile-page">
-            <div class="client-details">
+            <div class="client-documents">
               <h2>New Claim</h2>
               <div class="client-details-row">
                 <div class="details-col">
@@ -46,7 +46,8 @@
                     <div class="user-input-group">
                       <input
                         type="text"
-                        class="user-reg-input"
+                        class="user-reg-input disabled-input"
+                        disabled
                         placeholder="Policy Number"
                       />
                     </div>
@@ -55,7 +56,7 @@
                     <div class="user-input-group">
                       <input
                         type="text"
-                        class="user-reg-input"
+                        class="user-reg-input disabled-input"
                         disabled
                         placeholder="Reg Number"
                       />
@@ -63,105 +64,14 @@
                   </div>
                   <div class="client-prof-info">
                     <div class="user-input-group">
-                      <select
-                        name=""
-                        id=""
-                        disabled
-                        class="user-reg-input"
-                        style="padding: 0 0 0 1rem"
-                      >
-                        <option value="" selected>Select Cover Type</option>
-                        <option value="">--INDIVIDUAL--</option>
-                        <option value="">Personal Accident</option>
-                        <option value="">Professional Indemnity</option>
-                        <option value="">Others</option>
-                        <option value="">--CORPORATE--</option>
-                        <option value="">Contrators all risk</option>
-                        <option value="">Marine Cargo</option>
-                        <option value="">Fidelity Guarantee</option>
-                        <option value="">Work injury benefit</option>
-                        <option value="">Public Liability</option>
-                        <option value="">Fire and Perils</option>
-                        <option value="">Bulglary</option>
-                        <option value="">
-                          Contactor's Plant and Machinery
-                        </option>
-                        <option value="">Goods in transit</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="details-col">
-                  <div class="client-prof-info">
-                    <div class="user-input-group">
-                      <select
-                        name=""
-                        id=""
-                        class="user-reg-input"
-                        disabled
-                        style="padding: 0 0 0 1rem"
-                      >
-                        <option value="" selected>Select Insurer</option>
-                        <option value="">Sanlum</option>
-                        <option value="">Jubilee</option>
-                        <option value="">AAR</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="client-prof-info">
-                    <p
-                      style="
-                        width: 100%;
-                        padding-left: 1rem;
-                        text-align: center;
-                      "
-                    >
-                      Policy Period
-                    </p>
-                    <div class="user-split-row">
-                      <div class="user-input-group">
-                        <input
-                          type="text"
-                          class="user-reg-input"
-                          disabled
-                          placeholder="From"
-                          onblur="(this.type='text')"
-                          onfocus="(this. type='date')"
-                        />
-                      </div>
-                      <div class="user-input-group">
-                        <input
-                          type="text"
-                          disabled
-                          class="user-reg-input"
-                          placeholder="To"
-                          onblur="(this.type='text')"
-                          onfocus="(this. type='date')"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="client-prof-info">
-                    <div class="user-input-group">
                       <input
-                        type="number"
+                        type="text"
                         disabled
-                        class="user-reg-input"
-                        placeholder="Sum Insured"
+                        class="user-reg-input disabled-input"
+                        placeholder="Cover Type"
                       />
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div class="btn-holder" style="margin: 0 0 2rem 0">
-                <button class="create-btn">Fetch Information</button>
-              </div>
-            </div>
-            <div class="client-documents">
-              <h2>Input Sections</h2>
-              <div class="client-details-row">
-                <div class="details-col">
                   <div class="client-prof-info">
                     <div class="user-split-row">
                       <div class="user-input-group">
@@ -233,6 +143,57 @@
                   </div>
                 </div>
                 <div class="details-col">
+                  <div class="user-input-group">
+                    <input
+                      type="text"
+                      disabled
+                      class="user-reg-input disabled-input"
+                      placeholder="Insurer"
+                    />
+                  </div>
+                  <div class="client-prof-info">
+                    <p
+                      style="
+                        width: 100%;
+                        padding-left: 1rem;
+                        text-align: center;
+                      "
+                    >
+                      Policy Period
+                    </p>
+                    <div class="user-split-row">
+                      <div class="user-input-group">
+                        <input
+                          type="text"
+                          class="user-reg-input disabled-input"
+                          disabled
+                          placeholder="From"
+                          onblur="(this.type='text')"
+                          onfocus="(this. type='date')"
+                        />
+                      </div>
+                      <div class="user-input-group">
+                        <input
+                          type="text"
+                          disabled
+                          class="user-reg-input disabled-input"
+                          placeholder="To"
+                          onblur="(this.type='text')"
+                          onfocus="(this. type='date')"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="client-prof-info">
+                    <div class="user-input-group">
+                      <input
+                        type="number"
+                        disabled
+                        class="user-reg-input disabled-input"
+                        placeholder="Sum Insured"
+                      />
+                    </div>
+                  </div>
                   <div class="client-prof-info">
                     <div class="user-input-group">
                       <input
